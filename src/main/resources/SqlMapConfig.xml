@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <environments default="mysql">
+        <environment id="mysql">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql:///ssm?useUnicode=true&amp;characterEncoding=utf8"/>
+                <property name="username" value="root"/>
+                <property name="password" value="password"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!-- 使用的是注解 -->
+    <mappers>
+        <!-- <mapper class="com.zg.dao.IAccountdao"/> --> <!-- 该包下所有的dao接口都可以使用 -->
+        <package name="com.zg.dao"/>
+
+        <!--
+        <package name="com.zg.dao" /> 强烈推荐这种方法，不管注解还是配置映射文件，都是最便捷和通用的
+        <mapper class="com.zg.dao.IAccountdto"></mapper> 该方法可行，但是不推荐（不够便捷），需要一个一个编写
+        <mapper resource="com.zg.dao/xxx.xml"></mapper> resource属性只能在配置文件时使用，注解不可以用，而且该方法也不够便捷
+        -->
+    </mappers>
+</configuration>

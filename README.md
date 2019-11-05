@@ -18,3 +18,15 @@ web.xml 和 springmvc.xml属于SpringMVC框架的配置;
 Spring整合SpringMVC的框架原理：
 整合成功的表现：在controller（SpringMVC）中能成功的调用service（Spring）对象中的方法。
 
+
+创建数据库和表结构语句(MySQL)：
+create database ssm;
+use ssm;
+create table account (
+id int primary key auto_increment,
+name varchar(50),
+money double
+);
+
+
+SQLMapConfig.xml 属于 MyBaits 框架
