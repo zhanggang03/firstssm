@@ -10,3 +10,11 @@
    5、最后Spring整合mybatis框架配置事务（Spring的声明式事务管理）
    
 applicationContext.xml属于Spring框架的配置;
+
+web.xml 和 springmvc.xml属于SpringMVC框架的配置;
+
+将Spring框架（applicationContext.xml）整合入web.xml中；
+
+Spring整合SpringMVC的框架原理：
+整合成功的表现：在controller（SpringMVC）中能成功的调用service（Spring）对象中的方法。
+
