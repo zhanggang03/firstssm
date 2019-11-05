@@ -33,7 +33,7 @@ public class Account implements Serializable {
 
     @Override
     public String toString(){
-        return "Account{" +
+        return "Account:{" +
                 "id=" + id +
                 ", name='" + name + "'" +
                 ", money=" + money+
